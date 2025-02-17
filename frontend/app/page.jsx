@@ -77,7 +77,7 @@ export default function HomePage() {
 
     try {
         // Simulate API call delay
-        await new Promise((resolve) => setTimeout(resolve, 20000));
+        await new Promise((resolve) => setTimeout(resolve, 2000));
 
         // Use DUMMY_DATA instead of making the API call
         const data = DUMMY_DATA;
