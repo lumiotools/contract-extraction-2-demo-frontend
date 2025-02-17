@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { UploadIcon, Loader2 } from "lucide-react";
-import { LoadingAnimation } from "@/components/loading-animation";
+import { LoadingAnimation2 } from "@/components/loading-animation-2";
 
 export default function UploadModal({ isOpen, onClose, onUpload }) {
   const [file, setFile] = useState(null);
@@ -36,12 +36,12 @@ export default function UploadModal({ isOpen, onClose, onUpload }) {
 
   return (
     <>
-      {loading && <LoadingAnimation />}
+      {loading && <LoadingAnimation2 />}
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div className="bg-[#2A2A36] p-6 rounded-lg border border-gray-700 w-96">
-          <h2 className="text-xl font-bold mb-4 text-white">Upload Excel Sheet</h2>
+          <h2 className="text-xl font-bold mb-4 text-white">Upload Shipment History</h2>
           <Label htmlFor="excelFile" className="text-base text-gray-300 mb-2 block">
-            Upload Excel (XLSX)
+            Format: XLSX
           </Label>
           <div className="relative">
             <label

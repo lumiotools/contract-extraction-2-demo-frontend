@@ -1,110 +1,137 @@
 [
     {
         "Service": "Next Day Air Residential",
+        "Average Discount (%)": "48.28%",
         "Total Spend ($)": "46489.32"
     },
     {
         "Service": "2nd Day Air Residential",
+        "Average Discount (%)": "67.26%",
         "Total Spend ($)": "49250.77"
     },
     {
         "Service": "Ground Residential",
+        "Average Discount (%)": "56.92%",
         "Total Spend ($)": "48252.60"
     },
     {
         "Service": "Ground Commercial",
+        "Average Discount (%)": "50.07%",
         "Total Spend ($)": "47275.80"
     },
     {
         "Service": "3 Day Select Residential",
+        "Average Discount (%)": "14.47%",
         "Total Spend ($)": "32849.91"
     },
     {
         "Service": "Next Day Air Saver Residential",
+        "Average Discount (%)": "14.45%",
         "Total Spend ($)": "32845.84"
     },
     {
         "Service": "3 Day Select",
+        "Average Discount (%)": "4.19%",
         "Total Spend ($)": "27234.58"
     },
     {
         "Service": "2nd Day Air Commercial",
+        "Average Discount (%)": "64.71%",
         "Total Spend ($)": "48871.02"
     },
     {
         "Service": "Next Day Air Commercial",
+        "Average Discount (%)": "57.87%",
         "Total Spend ($)": "47402.18"
     },
     {
         "Service": "3 Day Select Commercial",
+        "Average Discount (%)": "10.07%",
         "Total Spend ($)": "30718.96"
     },
     {
         "Service": "Next Day Air Early Commercial",
+        "Average Discount (%)": "10.01%",
         "Total Spend ($)": "30691.71"
     },
     {
         "Service": "Next Day Air Early Residential",
+        "Average Discount (%)": "3.44%",
         "Total Spend ($)": "25976.52"
     },
     {
         "Service": "Next Day Air Saver Commercial",
+        "Average Discount (%)": "68.48%",
         "Total Spend ($)": "49497.58"
     },
     {
         "Service": "GSR Next Day Air Saver Residential",
+        "Average Discount (%)": "61.60%",
         "Total Spend ($)": "47856.66"
     },
     {
         "Service": "GSR Next Day Air Commercial",
+        "Average Discount (%)": "63.02%",
         "Total Spend ($)": "48216.42"
     },
     {
         "Service": "Worldwide Expedited",
+        "Average Discount (%)": "47.02%",
         "Total Spend ($)": "46338.07"
     },
     {
         "Service": "Next Day Air Commercial Collect",
+        "Average Discount (%)": "29.24%",
         "Total Spend ($)": "39644.97"
     },
     {
         "Service": "GSR Next Day Air Early Residential",
+        "Average Discount (%)": "29.22%",
         "Total Spend ($)": "39637.90"
     },
     {
         "Service": "Next Day Air Saver Commercial",
+        "Average Discount (%)": "21.84%",
         "Total Spend ($)": "36130.92"
     },
     {
         "Service": "GSR Next Day Air Saver Residential",
+        "Average Discount (%)": "34.08%",
         "Total Spend ($)": "41582.79"
     },
     {
         "Service": "Ground",
+        "Average Discount (%)": "40.00%",
         "Total Spend ($)": "40893.94"
     },
     {
         "Service": "Next Day Air",
+        "Average Discount (%)": "38.00%",
         "Total Spend ($)": "40485.58"
     },
     {
         "Service": "GSR Next Day Air Commercial",
+        "Average Discount (%)": "42.00%",
         "Total Spend ($)": "41365.44"
     },
     {
         "Service": "Ground Commercial",
+        "Average Discount (%)": "39.50%",
         "Total Spend ($)": "40282.90"
     },
     {
         "Service": "Ground Residential",
+        "Average Discount (%)": "41.50%",
         "Total Spend ($)": "41025.11"
     },
     {
         "Service": "Next Day Air Commercial Collect",
+        "Average Discount (%)": "37.50%",
         "Total Spend ($)": "39694.31"
     },
     {
         "Service": "GSR Next Day Air Early Residential",
+        "Average Discount (%)": "43.50%",
         "Total Spend ($)": "41919.44"
     }
 ]

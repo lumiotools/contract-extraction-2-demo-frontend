@@ -75,19 +75,32 @@ export default function HomePage() {
     setError(null);
     setLoading(true);
 
-    try {
-        // Simulate API call delay
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+    const apiBaseUrl =
+      process.env.NEXT_PUBLIC_BACKEND_URL;
 
-        // Use DUMMY_DATA instead of making the API call
-        const data = DUMMY_DATA;
+    try {
+      const formData = new FormData();
+      formData.append("file", contractFile);
+
+      const response = await fetch(`${apiBaseUrl}/api/extract`, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
         localStorage.setItem("extractedData", JSON.stringify(data.data));
         setExtractedContract(data.data);
         // setEditableTables(data.data.tables);
         setLoading(false);
-    } catch (error) {
-        setError(error.message);
+      } else {
+        const errorData = await response.json();
+        setError(errorData.message || "An error occurred");
         setLoading(false);
+      }
+    } catch (error) {
+      setError(error.message);
+      setLoading(false);
     }
   };
 
