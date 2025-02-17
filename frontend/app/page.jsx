@@ -11,6 +11,7 @@ import { useAnalysis } from "@/lib/Context";
 import { LoadingAnimation } from "@/components/loading-animation";
 import DisplayExtractedContract from "@/components/display-extracted-contract";
 import { DUMMY_DATA } from "@/constants/dummyData";
+import UploadModal from "@/components/UploadModal";
 
 export default function HomePage() {
   const router = useRouter();
@@ -29,6 +30,7 @@ export default function HomePage() {
   const [error, setError] = useState("");
   const [extractedContract, setExtractedContract] = useState();
   const [editableTables, setEditableTables] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -73,32 +75,19 @@ export default function HomePage() {
     setError(null);
     setLoading(true);
 
-    const apiBaseUrl =
-      process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
-
     try {
-      const formData = new FormData();
-      formData.append("file", contractFile);
+        // Simulate API call delay
+        await new Promise((resolve) => setTimeout(resolve, 20000));
 
-      const response = await fetch(`${apiBaseUrl}/api/extract`, {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        const data = await response.json();
+        // Use DUMMY_DATA instead of making the API call
+        const data = DUMMY_DATA;
         localStorage.setItem("extractedData", JSON.stringify(data.data));
         setExtractedContract(data.data);
         // setEditableTables(data.data.tables);
         setLoading(false);
-      } else {
-        const errorData = await response.json();
-        setError(errorData.message || "An error occurred");
-        setLoading(false);
-      }
     } catch (error) {
-      setError(error.message);
-      setLoading(false);
+        setError(error.message);
+        setLoading(false);
     }
   };
 
@@ -116,6 +105,12 @@ export default function HomePage() {
 
     // Save the updated extractedData back to local storage
     localStorage.setItem("extractedData", JSON.stringify(extractedData));
+  };
+
+  const handleUpload = (file) => {
+    // Handle the file upload logic here
+    console.log("Uploaded file:", file);
+    router.push("/output");
   };
 
   return (
@@ -238,15 +233,20 @@ export default function HomePage() {
             {/* <DisplayTables tables={editableTables} onTableChange={handleTableChange} /> */}
             <div className="mt-8">
               <Button
-                onClick={() => router.push("/results")}
+                onClick={() => setIsModalOpen(true)}
                 className="w-full bg-orange-500 hover:bg-orange-600 text-black text-xl font-medium h-14 rounded-xl"
               >
-                Calculate Discounts
+                Upload Shipment History
               </Button>
             </div>
           </div>
         )}
       </div>
+      <UploadModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onUpload={handleUpload}
+      />
     </div>
   );
 }
